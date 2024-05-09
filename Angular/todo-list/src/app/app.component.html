@@ -1,66 +1,23 @@
-<div>
 <div class="container">
   <div class="todo-list">
     <div class="input-group">
-      <input type="text" placeholder="Todo">
-      <button class="add-button">+</button>
+      <input type="text" placeholder="Todo" #newTask>
+      <button (click) = 'add(newTask.value)' class="add-button">+</button>
     </div>
     <table>
-      <tr class="even">
+      <tbody>
+      <tr *ngFor="let task of tasks" class="even">
         <td>
           <pre>
-            {{tasks[0]}}
+            {{task}}
           </pre>
         </td>
         <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
+          <button (click) = 'remove(task)' class="remove-button">X</button>
+          <button (click) = 'markAsDone(task)' class="done-button">Done</button>
         </td>
-      </tr>
-      <tr class="odd">
-        <td>
-          <pre>
-            {{tasks[1]}}
-          </pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="even">
-        <td>
-          <pre>
-            {{tasks[2]}}
-          </pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="odd">
-        <td>
-          <pre>
-            {{tasks[3]}}
-          </pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="even">
-        <td>
-          <pre>
-            {{tasks[4]}}
-          </pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
+        </tr>
+      <tbody>
     </table>
   </div>
 </div>
