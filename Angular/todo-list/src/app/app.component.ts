@@ -26,20 +26,19 @@ export class AppComponent {
   }
 
   remove(existingTask:Task){
-   var userConfirmed =  confirm('Are you sure, "${existingTask}"');
+   var userConfirmed =  confirm('Are you sure, "${existingTask.title}"');
     if(userConfirmed){
       this.tasks = this.tasks.filter(task => task != existingTask); 
     }
   }
 
-  markAsDone(task:Task){
-    task.isDone = true
-  }
 }
 
 class Task {
   constructor(public title :string){
   }
-
+  toggleIsDone(){
+    this.isDone = !this.isDone
+  }
   public isDone =false
 }
