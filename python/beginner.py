@@ -1,16 +1,21 @@
-#Written by Mluleki Wenkaba Mtande
-#1. Simple print
-#1.1 simple concat
-name = 'Mluleki'
-age = 30
-country = 'Namibia'
-print(name+' is a man')
-print(name+' is',age)
-print(name+' is from')
+class Item:
+    pay_rate = 0.8
+    def __init__(self,name:str,price:float,quantity=0):
+        assert price >= 0 ,f"{price} is not greater than zero!"
+        assert quantity >= 1 ,f"{quantity} is not greater than zero!"
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        
+    def calculate_total_price(self):
+        return self.price * self.quantity
+        
+    def apply_discount(self):
+        self.price = self.price * Item.pay_rate
 
-#1.2
-city = 'Windhoek'
-print('Hi. \How are you')
-print(city.upper())
-print(city.lower())
+item1 = Item("Phone",100,1)
+item1.apply_discount()
+print(item1.price)
+
+
 

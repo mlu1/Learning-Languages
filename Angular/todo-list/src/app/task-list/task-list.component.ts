@@ -32,12 +32,12 @@ remove(existingTask:Task){
     this.tasks = this.tasks.filter(task => task != existingTask); 
   }
 }
-
 }
 
 class Task {
 constructor(public title :string){
 }
+
 toggleIsDone(){
   this.isDone = !this.isDone
 }
