@@ -39,9 +39,30 @@
             
             console.log('hello'.length);
             console.log('hello'.toUpperCase());
+            
+            const object4 = {
+                message:'Good Job!',
+                price: 100
+            };
+            const {message , price} = object4;
             const object1 = {
-                    message:'hello'
+                message:'hello'
                 };
+            const object3 = {
+                message:'Good Job!'
+            };
+            const object5 = {
+                //message:message
+                message,
+                //method:function function4(){
+                //    console.log(method);
+                //}
+                method(){
+                    console.log('method');
+                }
+            };
+            console.log(object5)
+
         </script>
     </body>
 </html>
