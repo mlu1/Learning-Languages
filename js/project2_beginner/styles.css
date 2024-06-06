@@ -1,0 +1,68 @@
+*{
+    box-sizing:border-box;
+
+}
+
+body{
+    background-image: url('laptop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    background-color: rgb(255,255,255,0.8);
+    padding: 60px;
+    border-radius: 8px;
+    width:500px;
+}
+h1{
+    text-align:center;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/*
+button{
+    background-color: red;
+}
+
+.local_div{
+    background-color: red;
+    border-bottom: black;
+}
+
+#header-div{
+    background-color: green;
+}*/
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+label{
+    display:block;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button{
+    width:100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: rgb(45,215,144);
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(255,255,255,0.8);
+}
