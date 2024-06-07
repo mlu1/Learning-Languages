@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  lang="en">
     <head>
         <title> Rock Paper Scissors</title>
     </head>
@@ -26,15 +26,6 @@
                 losses:0
             };
             updateScoreElement()
-            /*
-            if (!score){
-                score = {
-                    wins:0,
-                    ties:0,
-                    losses:0
-                }
-            }*/
-            
             function playGame(playerMove){
                 const computerMove = pickComputerMove();
                 let result ='';
@@ -70,8 +61,8 @@
                 }else if(result ==='Tie') {
                     score.ties +=1    
                 }
-                /*console.log(localStorage.setItem(`score`,JSON.stringify(score)));
-                 */
+                console.log(localStorage.setItem(`score`,JSON.stringify(score)));
+                 
                 localStorage.setItem(`score`,JSON.stringify(score));
                 updateScoreElement();
                 document.querySelector('.js-result').innerHTML = result;
