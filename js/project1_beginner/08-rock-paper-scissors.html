@@ -56,8 +56,6 @@
                 }else if(result ==='Tie') {
                     score.ties +=1    
                 }
-                /*console.log(localStorage.setItem(`score`,JSON.stringify(score)));
-                 */
                 localStorage.setItem(`score`,JSON.stringify(score))
                 alert(`You picked ${playerMove},computer picked ${computerMove}.${result}
                 Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`);
