@@ -1,10 +1,10 @@
-const Header =()=>{
+const Header =({title})=>{
     const headerStyle = {
         backgroundColor:'royalblue',
         color:'#fff'
     };
     return( <header style={headerStyle}>
-                <h1>Groceries list</h1>
+                <h1>{title}</h1>
             </header>)
 } 
 
