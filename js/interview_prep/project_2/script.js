@@ -125,7 +125,6 @@ for(var i=0;i<3;i++){
 
 /*
     How would you use a clousre to create a private counter?
-
 */
 
 function counter(){
@@ -143,6 +142,8 @@ function counter(){
         retrieve,
     };
 }
+
+
 
 const c =counter();
 c.add(5)
@@ -189,3 +190,81 @@ function likeTheView(){
 
 let isSubscribed  = likeTheView();
 isSubscribed()
+/*
+    explicit and implicit binding , running a function once
+*/
+function once (func,context){
+    let ran;
+    //return a closure
+    return function(){
+        if (func){
+            ran  = func.apply(context || this,arguments);
+            func = null    
+        }
+        return ran
+        };
+    }
+
+const hello = once((a,b) => console.log("hello",a,b))
+hello(1,2);
+
+/*
+    Impleming a caching/Memorie Function
+    VERY IMPORTANT QUESTIONS
+*/
+
+function myMemorize(fn,context){
+    //store data the cache
+    const res = {};
+    return function (...args){
+        var argsCache = JSON.stringify(args)
+    
+        if (!res[argsCache]){
+            res[argsCache] = fn.call(context || this, ...args);
+        }
+        return res[argsCache]
+    }
+}
+
+const clumsyProduct = (n1,n2) =>{
+    for (let i =1; i<= 1000000;i++){}
+    return n1 *n2
+};
+
+const memoryClumsyProduct = myMemorize(clumsyProduct)
+
+console.time("First call")
+console.log(memoryClumsyProduct(9477,7649))
+console.timeEnd("First call")
+
+console.time("First call")
+console.log(memoryClumsyProduct(9477,7649))
+console.timeEnd("First call")
+
+/*
+    Closures in Javascript
+    What is the difference between Clousre and Scope
+    ***whenever you create a function within another function.
+    the inner function is a closure
+    ** but the scope in javascript defines which variables you have access to
+*/
+
+
+/*
+    Currying
+    A function that returns one argument at a time and returns 
+    example f(a,b) into f(a)(b)
+    */
+
+function f(a,b){
+    console.log(a,b)
+}
+//gets converted to
+
+function fb(a){
+    return function (b){
+     return `${a} ${b}`
+    }
+}
+
+console.log(fb(5)(6))
