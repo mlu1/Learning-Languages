@@ -3,7 +3,6 @@
     Lexical Scope- A variable defined outside a function can be 
     accessed inside a function
 */
-
 //global
 function local(){
     //local
@@ -249,12 +248,11 @@ console.timeEnd("First call")
     ** but the scope in javascript defines which variables you have access to
 */
 
-
 /*
     Currying
     A function that returns one argument at a time and returns 
     example f(a,b) into f(a)(b)
-    */
+*/
 
 function f(a,b){
     console.log(a,b)
@@ -266,5 +264,120 @@ function fb(a){
      return `${a} ${b}`
     }
 }
-
 console.log(fb(5)(6))
+/*
+    Currying Questions
+    //Question 1 -sum(2)(6)(1)
+    --sum all the parameters in the arguments
+      the simple implementation   
+*/
+/*function sum(a,b,c){
+    return a+b+c
+}
+console.log(2,6,1)
+*/
+
+function sums(a){
+    return function (b) {
+        return function (c) {
+            return a+b+c;
+        };
+    };
+}
+
+console.log(sums(2)(6)(1))
+
+/*
+    The function evaluate can be written in the several ways
+    evaluate("sum")(4)(3)
+    evaluate("multiply")(4)(3)
+    evaluate("divide")(4)(3)
+    evaluate("substract")(4)(3)
+*/
+
+function evaluate(operation_param){
+    return function (a) {
+        return function (b) {
+            if(operation_param === "sum") return a+b;
+            else if(operation_param ==="multiply") return a*b;
+            else if (operation_param ==="divide") return a/b;
+            else if (operation_param === "substract") return a-b;
+            else return "Invalid Operation"
+            };
+        };
+}
+
+const div = evaluate("divide")
+console.log(div(10)(2))
+console.log(evaluate("sum")(2)(2))
+console.log(evaluate("substract")(2)(2))
+console.log(evaluate("multiply")(2)(2))
+
+/*
+    Currying in Javascript 
+    what is Infinite Currying
+    console.log(add(5)(2)(5))
+*/
+
+//implement this function
+/*
+    this looks like a recursive function that will check the value
+    if a is given , if given it will calculate (a+b) othwerwise it will
+    return the value of a  
+*/
+function adds(a){
+   return function (b) {
+    //if b has any arguments
+    if(b) return adds(a+b);
+    return a;
+   };
+}
+
+console.log(adds(5)(2)(4)(8)())
+/*
+    Currying vs Partial Application
+*/
+
+function sumz(a){
+    return function(b,c){
+        return a+b+c
+    }
+}
+const x = sumz(10)
+console.log(x(5,6))
+console.log(x(3,2))
+// or
+console.log(sumz(20)(1,4))
+/*
+    DOM manipulation
+*/
+function updateElemetText(id){
+    return function(content){
+        document.querySelector(`#`+id).textContent = content;
+    };
+}
+const updateHeader = updateElemetText("heading")
+updateHeader('Hello Chinelo')
+
+/*
+    curry() implementation
+    Converts f(a,b,c) into a f(a)(b)(c)
+    currying means that the number of arguments 
+    should be equal to the number of arguments
+*/
+
+function curry(func){
+    return function curriedFunc(... args){
+        if (args.length >= func.length){
+            return func(... args);
+        }else{
+            return function(... next){
+                return curriedFunc(... args,...next);
+            };
+        }
+    };
+}
+
+const sumzs =(a,b,c,d) => a+b+c+d;
+const totalSum = curry(sumzs);
+console.log(totalSum(1)(6)(5)(6));
