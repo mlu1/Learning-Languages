@@ -380,4 +380,4 @@ function curry(func){
 
 const sumzs =(a,b,c,d) => a+b+c+d;
 const totalSum = curry(sumzs);
-console.log(totalSum(1)(6)(5)(6));
+console.log(totalSum(1)(6)(5)(6));s
