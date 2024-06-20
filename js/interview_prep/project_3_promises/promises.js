@@ -13,27 +13,28 @@ function likeTheVideo(video){
         setTimeout(() => {
             resolve(`Like the ${video} video`);
         },500)
-    })
+    });
 }
 
-function shareTheVideo(video,cb){
+function shareTheVideo(video){
     return new Promise((resolve,reject) =>{
         setTimeout(() => {
             resolve(`Share the ${video} video`)
         },1000)
-    })
+    });
 }
 
-const message = importantAction('Mluleki',function(message)
-{
-    console.log(message)
-    likeTheVideo("Video has been liked?", (action) => {
-        console.log(action);
-    shareTheVideo("Javascript Interview Questions",(action)=>{
-        console.log(action);
-        });
+importantAction('Mluleki')
+.then((res) =>{
+    console.log(res);
+    likeTheVideo("super").then((res) =>{
+        console.log(res);
+    shareTheVideo("good").then((res) =>{
+        console.log(res);
     });
-});
+    });
+})
+.catch((err) => console.error(err)); 
+console.log("stop");
 
-//console.log(message);
-//console.log("stop");
+
