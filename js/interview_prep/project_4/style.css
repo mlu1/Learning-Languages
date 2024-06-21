@@ -1,0 +1,45 @@
+#image {
+    display: block;
+    width:100%;
+    max-width :100%;
+    height: auto;
+}
+
+#img-div{
+    text-align: center;
+}
+
+h1{
+    width:200px;
+    height: 200px;
+    background: green;
+    font-size:16px;
+    font-weight:normal;
+}
+
+
+.parent{
+    width:200px;
+}
+
+.blue{
+    background: blue;
+    width:150px;
+    height: 150px;
+    border-radius:50% ;
+}
+
+body{
+    background: pink;
+}
+
+.red{
+    width:150px;
+    height: 150px;
+    background: red;
+    display: block;
+}
+
+#abc{
+    font-size:30px;
+}
