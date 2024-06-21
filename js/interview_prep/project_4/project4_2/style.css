@@ -1,0 +1,18 @@
+*{
+    margin:0
+}
+#parent{
+    display:flex;
+    background: red;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+}
+
+.child{
+    background: yellow;
+    width:200px;
+    height: 200px;
+    margin:5px;
+}
