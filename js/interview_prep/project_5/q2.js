@@ -44,8 +44,53 @@ function fizzBuzz(n) {
     }
         
 }
-function main() {
-    const n = parseInt(readLine().trim(), 10);
 
-    fizzBuzz(n);
+
+'use strict';
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', inputStdin => {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', _ => {
+    inputString = inputString.trim().split('\n').map(string => {
+        return string.trim();
+    });
+    
+    main();    
+});
+
+function readLine() {
+    return inputString[currentLine++];
 }
+
+/*
+ * Complete the vowelsAndConsonants function.
+ * Print your output using 'console.log()'.
+ */
+function vowelsAndConsonants(s) {
+    
+    var consonents = []
+    let result
+    const a = s.split("");
+     for (var i = 0; i < a.length; i++) {
+        if (a[i] === 'a' || a[i] ==='e' || a[i] ==='i' || a[i] ==='o' ||
+            a[i] === 'u') {
+                console.log(a[i])
+        }
+        else{
+            consonents.push(a[i])
+        }
+    }
+    
+    for (var j = 0; j < consonents.length; j++) {
+        console.log(consonents[j])
+    }
+    
+
