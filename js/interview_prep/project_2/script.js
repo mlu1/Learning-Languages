@@ -113,7 +113,7 @@ function a(){
     }
 }
 
-for(var i=0;i<3;i++){
+for(let i=0;i<3;i++){
     function innerFunction(i){
         setTimeout(function log(){
             console.log(i);
@@ -128,7 +128,7 @@ for(var i=0;i<3;i++){
 
 function counter(){
     //Define a private counter
-    var _counter = 0;
+    let _counter = 0;
     
     function add(increment){
         _counter += increment;
@@ -152,7 +152,7 @@ console.log(c.retrieve())
 /*
 What is module pattern? 
 */
-var Module = (function(){
+let Module = (function(){
     function privateMethod(){
         console.log("private")
     }

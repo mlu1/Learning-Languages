@@ -2,8 +2,8 @@
 var ctx = canvas.getContext("2d")
 ctx.fillText("helloworld",10,150);*/
 
-var canvas =document.createElement("canvas")
-var context = canvas.getContext("2d")
+let canvas =document.createElement("canvas")
+let context = canvas.getContext("2d")
 canvas.height= 400
 canvas.width = 600
 mainImage = new Image();
