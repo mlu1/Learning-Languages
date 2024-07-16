@@ -11,6 +11,13 @@ print("Hello" +" "+"Mluleki")
 
 #######An Exercise########
 print("Day 1 string manipulation")
-print("String Concatenation is done with the + sign")
+print('String Concatenation is done with the "+"" sign')
 print('eg. print("Hello + World")')
 print("New lines can be created with a backslash")
+
+print("Hello "+ input("What is your name?"))
+print("My name is")
+
+##calculate the len of the string
+names = input("Enter your name to be counted")
+print(len(names))

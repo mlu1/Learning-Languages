@@ -40,7 +40,6 @@ def update_item(item_id:int,item:Item):
         return {"Error":"Item ID does not already exists."}
 
     inventory[item_id].update(item)
-
     return inventory[item_id]
 
     
