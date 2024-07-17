@@ -1,16 +1,19 @@
-/*
+
 //What is function decalration?
 function square(num){
-    return num*num;
+    console.log(num*num);
 }
+square(5)
 
+/*
 what is a function expression?
 A function stored into a variable
+*/
 
 const square_values = function (num) {
     return num * num;
 }
-
+/*
 
     Q3 what are first class functions?
 
