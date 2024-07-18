@@ -147,7 +147,6 @@ let user = {
     },
 }
 
-
 user.rc1();
 user.rc2();
 
