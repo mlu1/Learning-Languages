@@ -179,3 +179,71 @@ let dd
 dd = cc
 dd =cc.greeting = "Hello";
 console.log(dd.greeting)
+
+
+//Objects are compared by reference and not by value
+console.log({ a:1 } == { a:1 })  
+//console.log({ a:1 } === { a:1})
+
+/*
+  Whats the output in object referencing?
+*/
+
+let person = {name:"Mluleki"}
+const members = [person]
+person = null
+//why are you not null
+console.log(members)
+
+/*
+    whats the output?
+*/
+const value  = {
+    number:10
+}
+
+// at first it is passed as a reference as default value
+const multiply_data = (x= {...value}) =>{
+    console.log((x.number *=2));
+}
+
+multiply_data();//20
+multiply_data();//20
+multiply_data(value) // the object has been modified! 20
+multiply_data(value)//40
+
+/*
+    Whats the output
+*/
+
+function changeAgeAndReference(persons){
+    persons.age = 25
+    persons = {
+        name: "John",
+        age:50,
+    };
+    return persons
+}
+const personObj1 = {
+    name:"Alex",
+    age:30
+}
+
+const personObj2  =  changeAgeAndReference(personObj1)
+
+console.log(personObj1)
+console.log(personObj2)
+
+/*
+    Whats the output?
+    what's shallow copy and Deep copy?
+*/
+
+let user7  = {
+    name7: "Mluleki",
+    age:35
+};
+
+const objClone = Object.assign({},user);
+objClone.name = "Cool"
+console.log(user7,objClone)
