@@ -76,12 +76,58 @@ console.log(user_q3.refs.name) //it is pointing to nothings
 */
 
 function makeOver2(){
-    return{
+    return {
         name:"John",
         refs(){
-            return this
+            return this;
         }
     }
 }
 
 //function is inside an object and is poiting to 
+let user10  = makeOver2();
+console.log(user10.refs().name)
+
+
+
+/*
+    Whats the output?
+*/
+const user11 = {
+    name: "Mluleki Mtande",
+    logMessage(){
+        console.log(this.name);
+    },
+};
+
+setTimeout(user11.logMessage,1000) //output is undefined
+
+setTimeout(function(){
+    user11.logMessage();
+},1000)
+
+/*
+    whats the output?
+*/
+
+const user12 ={
+    name:"MLU",
+    greet(){
+        return `Hello,${this.name}`
+    },
+    farewell:() =>{
+        return `Goodbye, ${this.name}`
+    },
+}
+
+console.log(user12.greet());
+console.log(user12.farewell());
+
+
+
+
+
+
+
+
+
