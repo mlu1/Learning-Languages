@@ -1,0 +1,16 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-section{
+    position: relative;
+    left: 20px;
+}
+
+.output-section{
+    position: relative;
+    display: inline;
+}
