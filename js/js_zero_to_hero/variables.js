@@ -12,9 +12,83 @@ console.log(trimStr.toLowerCase())
 console.log(trimStr.slice(0,2))
 
 /**
- * INTRODUUCTION
+ * string manipulation
  */
 
 let age = 35
 let fullname = 'Mluleki Mtande'
-console.log(`The age is ${age} and name is ${fullname}`)
+myself = `The age is ${age} and name is ${fullname}`
+
+let str1 = "the complete course"
+let str2 = "javascript"
+console.log(str1+str2)
+console.log(myself)
+
+console.log(typeof age)
+
+/**
+ * DATA TYPES
+ */
+
+let str3 = 'mlu';
+
+console.log(typeof str3,str3);
+console.log(typeof(str));
+
+let num3 = "34";
+console.log(typeof num3,num3);
+
+let num4 = +num3
+console.log(typeof num4,num4)
+
+let num5 = "53"
+console.log(parseInt(num5))
+
+let num6 = 54+""
+
+let num7 = 20
+let num8 = 30
+
+console.log(20+30)
+
+let num9 = "10"
+let num10 = "11"
+console.log(num9+num10)
+
+let num11 = "20";
+let num12 = 50;
+console.log(typeof (num11+num12))
+
+/**
+ * BigInt , null and 
+ */
+
+let myNum =  BigInt(122204885958595859302444444444)
+console.log(typeof myNum,myNum)
+
+let num13 = 12n
+console.log(typeof num13)
+console.log(num13.MAX_SAFE_INTEGER)
+
+
+/**
+ * undefined: declare a variable but not assing a value
+ */
+let fname
+console.log(typeof(fname))
+
+fname = 'mlu'
+console.log(typeof fname,fname)
+
+
+/**
+ * null - nothing -no value stored in variables
+ */
+
+let ti = null;
+console.log(ti)
+console.log(typeof ti)
+ti = "javascript"
+
+
+console.log(typeof ti,ti)
