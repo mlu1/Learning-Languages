@@ -137,3 +137,85 @@ if(num21%2===0){
 else{
     console.log("Odd number")
 }
+
+/**
+ * Ternary operations
+ */
+let isEven =  num21%2 ===0? "even input":"Odd number"
+console.log(isEven)
+
+let website = "Udemy"
+let course_name = "Javascript"
+let code_challenge = true
+
+if(website === "Udemy"){
+    if(course_name === "Javascript"){
+        if(code_challenge){
+            console.log('I can learn everyday')
+        }
+        else{
+            console.log("challenge is not present")
+        }
+    }
+    else{
+        console.log("this is course is not javascript")
+    }
+}
+else{
+    console.log("I want to learn from Udemy")
+}
+
+
+/**
+ * and or operator
+ */
+
+let courses_names = 'python'
+let subtitle_names = true
+
+if(course_name && subtitle_names){
+    console.log('Good idea for learning')
+}
+else{
+    console('I would not like to learn')
+}
+
+
+if(courses_names == "Javascript" || code_challenge ==false ){
+    console.log("I want to learn this one")
+}
+else{
+    console.log("I dont want to learn this course")
+}
+
+/**
+ * More if statements
+ */
+let a = 10
+if(a>10){
+    console.log('Number is greater than 5')
+}
+else if(a ===10){
+    console.log("Number is exactly 10")
+}
+else{
+    console.log("Number is less than 10")
+}
+
+let greeting = 'evening'
+
+if(greeting == 'morning'){
+    console.log(greeting)
+}
+
+else if(greeting === 'afternoon'){
+    console.log('Good afternoon')
+}
+
+else if(greeting === 'evening'){
+    console.log("Goodnight")
+}
+
+else{
+    console.log("Hellow")
+}
