@@ -89,6 +89,51 @@ let ti = null;
 console.log(ti)
 console.log(typeof ti)
 ti = "javascript"
-
-
 console.log(typeof ti,ti)
+
+/**
+ * Boolean
+ */
+let flag = true
+console.log(flag)
+
+let num20 = 13 
+let str20 = "13"
+
+console.log(typeof(num20),typeof(str20))
+console.log(num20 === str1) //compare datatypes + theri value
+
+/**Truthy and falsy values*/
+
+/** falsy values
+ * 0 , "" ,null ,undefined, false
+ */
+console.log(Boolean(0)) 
+console.log(Boolean(null)) 
+console.log(Boolean(undefined)) 
+console.log(Boolean(false))
+
+
+/**
+ * if else condition
+ */
+
+let myAge = 40
+
+if(myAge >=18){
+    console.log("Eligible for voting")
+}
+else{
+    {
+        console.log("You cannot vote")
+    }
+}
+
+let num21 = 13
+
+if(num21%2===0){
+    console.log("even number")
+}
+else{
+    console.log("Odd number")
+}
