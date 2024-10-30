@@ -202,7 +202,7 @@ else{
     console.log("Number is less than 10")
 }
 
-let greeting = 'evening'
+let greeting = 'morning'
 
 if(greeting == 'morning'){
     console.log(greeting)
@@ -218,4 +218,23 @@ else if(greeting === 'evening'){
 
 else{
     console.log("Hellow")
+}
+
+/**
+ * switch statements
+ */
+
+let hello_greet = 'hello'
+
+switch(greeting){
+    case 'morning':
+        console.log("Good morning")
+        break 
+    case 'afternoon':
+        console.log("Good afternoon")
+    case 'night':
+        console.log("Good night")
+    default:
+        console.log("Good noon!")
+        break
 }
