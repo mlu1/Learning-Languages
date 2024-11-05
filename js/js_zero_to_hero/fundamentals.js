@@ -126,7 +126,6 @@ let [a,b,...rest] = array1
 console.log(Array.isArray(rest))
 console.log(typeof a,a)
 
-
 /**
  * 2.0 Objects
  */
@@ -141,3 +140,88 @@ console.log(obj["name"])
 console.log(obj["age"])
 console.log(obj.name)
 console.log(obj["my Hobbies"])
+
+/**
+ * 2.1 Add remove objects
+ */
+
+const cars = {} 
+cars.name = 'Toyota'
+cars.model = 'Camry'
+cars.year = 2002
+cars['color'] = 'Black'
+
+console.log(cars)
+delete cars.color
+console.log(cars)
+
+for(let key in cars){
+    console.log(cars[key])
+}
+
+console.log(Object.keys(cars).length)
+
+for(let key of Object.keys(cars)){
+    console.log(`${key} : ${cars[key]}`)
+}
+
+const arrayObject = [{
+    name:'Alice',age:20},
+    {name:'Bob',age:22},
+    {name:'Mluleki',age:35}
+]
+
+for(let obj of arrayObject){
+    console.log(obj.age)
+}
+
+/**
+ * Spread Operator
+ * clone or copy array
+ */
+const originalArray = [32,22,11];
+const copiedArray = [...originalArray] //copy original value to copied array
+console.log(copiedArray)
+
+/**
+ * merge array
+ */
+
+const array23 = [10,20,30]
+const array24 = [40,50,60] 
+const array25 = [70,80,90] 
+
+const mergedArray = [...array23,...array24,...array25]
+console.log(mergedArray)
+
+/**
+ * add element
+ */
+const arr26 = [10,20,30]
+const newArrays = [...arr26,76,54,43]
+
+
+console.log(newArrays)
+
+/**
+ * copy object
+ * merge objects
+ * add propeties
+ */
+
+const originalObj = {name:'Mlu',age:22}
+const copiedObj = {...originalObj}
+console.log(copiedObj)
+
+
+console.log('Merge Objects')
+const obj1 ={name:'Mlu'}
+const obj2 = {age:35}
+
+const mergedObj = {...obj1,...obj2}
+console.log(mergedObj)
+
+const upDate = {...mergedObj,gender:'male'}
+console.log(upDate)
+
+
