@@ -133,7 +133,8 @@ console.log(typeof a,a)
 const obj ={
     name:'Mluleki',
     age:35,
-    "my Hobbies":['learning','football','criket']
+    "my Hobbies":['learning','football','criket'],
+    country:'eSwatini'
 }
 
 console.log(obj["name"])
@@ -223,5 +224,43 @@ console.log(mergedObj)
 
 const upDate = {...mergedObj,gender:'male'}
 console.log(upDate)
+
+/**
+ * Destructuring
+ */
+
+const {name,age,country} = obj
+console.log(age)
+
+const student ={
+    fname:'mlu',
+    lname:'mtande'
+}
+
+/**
+ * rename variables
+ */
+const {fname:first,lname:last} = student
+console.log(first)
+
+
+/**
+ * Nested objects
+ */
+
+const personalDetails ={
+    myname:'mluleki',
+    age:35,
+    address:{
+        city:'New York',
+        mycountry:'USA'
+    }
+}
+
+const {myname:personalName,address:{city,mycountry}} = personalDetails
+console.log(personalName)
+console.log(city)
+console.log(mycountry)
+
 
 
