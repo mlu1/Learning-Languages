@@ -1,6 +1,17 @@
 /**
  * 1.1 Find target index in array
  */
+function isEven(n){
+    if (n%2==0){
+        return true
+    }
+    else{
+        return false
+    }
+}
+
+const isEvenValue = isEven(11)
+console.log(isEvenValue)
 
 function findIndex(array1,target){
     for(let i =0;i<array1.length;i++){
@@ -30,6 +41,5 @@ const greet = (name)=>{
 (function(names){
     console.log(`Hello ${names}`)
 })('David')
-
 
 greet('Charles')
