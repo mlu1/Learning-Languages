@@ -70,3 +70,18 @@ function maximum(array7){
 const maxi =findMax(10,30,15,90,69,100)
 console.log(maxi)
 console.log(maximum([1,12,3,45,7]))
+
+
+/**
+ * Function inside a function
+ */
+
+function outerFunc (){
+    console.log("Outer Function is executed")
+    function innerFunction(){
+        console.log('innerFunction is executed')
+    }
+    return innerFunction()
+}
+
+outerFunc();
