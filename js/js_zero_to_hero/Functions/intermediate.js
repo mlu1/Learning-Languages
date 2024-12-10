@@ -71,7 +71,6 @@ const maxi =findMax(10,30,15,90,69,100)
 console.log(maxi)
 console.log(maximum([1,12,3,45,7]))
 
-
 /**
  * Function inside a function
  */
