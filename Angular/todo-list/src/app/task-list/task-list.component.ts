@@ -27,7 +27,7 @@ add (newTask:string){
 }
 
 remove(existingTask:Task){
- var userConfirmed =  confirm('Are you sure, "${existingTask.title}"');
+ let userConfirmed =  confirm('Are you sure, "${existingTask.title}"');
   if(userConfirmed){
     this.tasks = this.tasks.filter(task => task != existingTask); 
   }
