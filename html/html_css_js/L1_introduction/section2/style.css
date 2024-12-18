@@ -1,0 +1,22 @@
+@media(max-width:800px){
+    body{
+        flex-direction: column;
+    }
+}
+
+html,body{
+    margin: 0px;
+    height: 100%;
+}
+
+body{
+    display: flex;
+}
+
+Main{
+    flex: 4;
+}
+
+Aside{
+    flex:1;
+}
