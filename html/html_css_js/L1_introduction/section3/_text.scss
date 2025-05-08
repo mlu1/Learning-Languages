@@ -1,0 +1,12 @@
+h1{
+    font-size: 2rem;
+
+@media(width >=40rem) {
+    font-size:3rem;
+    }
+
+@media(width >= 60em) {
+    font-size:4rem;
+    }
+    
+}

@@ -1,0 +1,8 @@
+body{
+    background-color: white;
+}
+
+th,td{
+    padding: 10px;
+    min-width:100px;
+}
