@@ -27,7 +27,7 @@ function displaySquare(fn){
 */
 (function (x){
     return (function(y){
-        console.log(x); //the output is 1 and not undefined. Firts it will search in the inner scope, if not found it will search in outer scope
+        console.log(x); //the output is 1 and not undefined. First it will search in the inner scope, if not found it will search in outer scope
     })(2);
 })(1);
 

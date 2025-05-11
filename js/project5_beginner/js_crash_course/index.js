@@ -26,3 +26,30 @@ for (i=0;i<arr2.length;i++){
 
 document.write("<br/> <br/> After...<br/>")
 document.write(arr2)
+
+
+/*
+    School Grades
+*/
+var m1 = parseInt(prompt("Enter Mark 1","Enter"))
+var m2 = parseInt(prompt("Enter Mark 2","Enter"))
+var m3 = parseInt(prompt("Enter Mark 3","Enter"))
+
+var total = m1+m2+m3
+
+var  percent= total*100/150
+alert(percent)
+
+if(percent > 80){
+    alert("Grade A")
+}
+else if (percent >=60){
+    alert("Grade B")
+}
+
+else if (percent >=40){
+    alert("Grade C")
+}
+else{
+    alert("Grade D")
+}
