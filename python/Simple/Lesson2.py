@@ -28,3 +28,19 @@ print(RandomStuff)
 
 ListNums = [1,2,2,3,3,3,9,10,8]
 print(sum(ListNums))
+
+var = 10
+
+if var == 10:
+    print("v is 10")
+else:
+    print("v is not == 10")
+    
+
+greater =10
+less =5
+
+if greater >= less:
+    print("yes")
+else:
+    print("no")
