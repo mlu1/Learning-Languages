@@ -20,12 +20,19 @@ print(OS[-3:])
 
 for item in OS[0:4]:
     print(item)
-    
-    
- '''
+        
+'''
  TUPLES
  '''
 tups = (200,50)
 print(tups)
+print(tups[0])
+print(tups[1])
+for tup in tups:
+    print(tup)
+    
 
+tup2 = (100,250,300)
+print(tup2)
+  
 
